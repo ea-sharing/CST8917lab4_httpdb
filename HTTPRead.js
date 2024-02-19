@@ -29,7 +29,7 @@ async function readDocument(req, res) {
         // Redis configuration
         var cacheConnection = redis.createClient({
             url: "rediss://lab4.redis.cache.windows.net:6380",
-            password: "ceJXNbXA3eJGaxgK3aWwceySP3WuFsYQrAzCaHyFl48=",
+            password: "pass=",
         });
 
         await cacheConnection.connect();
@@ -70,7 +70,7 @@ async function readDocument(req, res) {
             useUnifiedTopology: true,
             auth: {
                 username: "cst8917cosmodbaccount",
-                password: "HE0aEnHjsWpuRWKtdB7gv7dvdhC7kk7KT92riPKzAkngN0urHLNhj29tVw2dr4LSRCCgQEQix1MmACDbiLkofg=="
+                password: "pass=="
             }
         });
         await client.connect();
@@ -93,7 +93,7 @@ async function readDocument(req, res) {
         // Save the document to Redis cache
         const cacheConnection = redis.createClient({
             url: "rediss://lab4.redis.cache.windows.net:6380",
-            password: "ceJXNbXA3eJGaxgK3aWwceySP3WuFsYQrAzCaHyFl48=",
+            password: "pass=",
         });
         await cacheConnection.connect();
         await cacheConnection.set(documentId, JSON.stringify(document));

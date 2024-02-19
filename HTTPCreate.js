@@ -5,12 +5,12 @@ async function createDocument(req, res) {
     console.log('HTTPCreateDocument function processed a request.');
 
     const { body } = req;
-    const connectionString = "mongodb://cst8917cosmodbaccount:HE0aEnHjsWpuRWKtdB7gv7dvdhC7kk7KT92riPKzAkngN0urHLNhj29tVw2dr4LSRCCgQEQix1MmACDbiLkofg==@cst8917cosmodbaccount.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@cst8917cosmodbaccount@";
+    const connectionString = "mongodb://cst8917cosmodbaccount:pass==@cst8917cosmodbaccount.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@cst8917cosmodbaccount@";
     const dbName = "cst8917lab2db";
     const collectionName = "cst8917lab2colid";
 
     try {
-        const client = new MongoClient(connectionString, { useNewUrlParser: true, useUnifiedTopology: true, auth: { username: "cst8917cosmodbaccount", password: "HE0aEnHjsWpuRWKtdB7gv7dvdhC7kk7KT92riPKzAkngN0urHLNhj29tVw2dr4LSRCCgQEQix1MmACDbiLkofg==" } });
+        const client = new MongoClient(connectionString, { useNewUrlParser: true, useUnifiedTopology: true, auth: { username: "cst8917cosmodbaccount", password: "pass==" } });
         await client.connect();
 
         const database = client.db(dbName);
